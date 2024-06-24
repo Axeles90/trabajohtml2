@@ -43,5 +43,45 @@ input ,input:valid{
     border: dotted 20px grey;
     background-clip:content-box;
 }
-
-
+.modificando{
+    height: 40px;
+    width: 40px;
+    border: solid 3px grey;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px grey;
+}
+.caja{
+    height: 300px;
+    width: 300px;
+    border: solid 5px grey;
+    overflow-x: scroll;
+}
+.texto{
+    display: flexbox;
+    height: 150px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+.texto p{
+    column-width: 100px;
+    column-rule:dashed 3px green;
+}
+.ejer9{
+    text-overflow: ellipsis;
+    text-shadow: 2px 2px 2px grey;
+    word-wrap: break-word;
+}
+.elemento2d{
+    width: 100px;
+    height: 100px;
+    background: beige;
+    transform:rotate(40deg);
+}
+.ejer10{
+    width: 300px;
+    height: 300px;
+    overflow: scroll;
+    border: solid 3px lightblue;
+    box-sizing: border-box;
+    resize: both;
+}
