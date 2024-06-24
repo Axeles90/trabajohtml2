@@ -7,3 +7,41 @@ input:invalid{
 input ,input:valid{
     border-color: grey;
 }
+#pie{
+    margin-top: 300px;
+}
+.boxcontenedor{
+    background-color: beige;
+    width: 500px;
+    border-radius: 10px;
+    color: black;
+    
+}
+.boxcontenedor h2{
+    color: blue;
+}
+.boxcontenido{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.6s linear;
+}
+.boxcontenedor:hover > .boxcontenido{
+    max-height: 300px;
+}
+.fondo{
+    font-size: 30px;
+    text-align: center;
+    align-content: center;
+    color: black;
+    width: 500px;
+    height: 200px;
+    
+}
+.fondo h2{
+    background-clip:content-box;
+    background-color: blanchedalmond;
+    border: dotted 20px grey;
+    background-clip:content-box;
+}
+
+
