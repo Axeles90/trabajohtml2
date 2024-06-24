@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Ejercicio2" content="Ejercicio practico Html y Css 2">
+    <title>Ejercicio practico 2</title>
+    <link rel="stylesheet" href="estilo2.css">
+</head>
+<body>
+    <hgroup>
+        <h1 contenteditable="true">Esta es la cabecera</h1>
+        <h2 hidden>Este es el subtitulo</h2>
+        <h3>tercer parrafo</h3>
+    </hgroup>
+    <label for="texto" spellcheck="true">Texto para corregir si hace falta</label>
+    <figure>
+        <img src="archivos/imagen/planeta tierra.png" alt="planeta tierra" height="150px" width="150px" title="planeta tierra">
+    </figure><br><br>
+
+    <!--Creamos lista ordenada-->
+
+    <ol reversed>
+        <li>A primero</li>
+        <li>B segundo</li>
+        <li>C tercero</li>
+        <li>D cuarto</li>
+        <li>E quinto</li>
+    </ol><br><br>
+    <!--Añadimos etiquetas details,mark,meter,progress y wbr-->
+    <details>
+        <summary title="Ejemplo">Presione para descripcion</summary>
+        <p title="Descripcion del ejemplo">Descripcion de la etiqueta details</p>
+    </details>
+    <p>Creamos un parrafo para mostrar la etiqueta <mark id="mark">MARK</mark> y que quede de ejemplo</p>
+    <form action="/send/" method="post">
+    <meter value="6" min="0" max="10" low="6" high="9" optimum="10"></meter>
+    </form> <br>
+    <label for="progreso">Progreso del archivo:</label>
+    <progress id="progreso" max="100" value="70">70%</progress><br><br>
+
+    <p>Este es un ejemplo de la etiqueta WB <wbr>usandoloparacortaruna<wbr>palabralargaenunsaltodelinea<wbr></p>
+
+    <!--Ejercicio 4 usando datalist, output y keygen-->
+
+    <form action="" method="get" novalidate>
+        <fieldset>
+            <legend>Datalist</legend>
+        <label for="">Eliga una opcion:*</label>
+            <input type="text" list="opciones" name="milista" required>
+            <datalist id="opciones">
+                <option value="Opcion1">Opcion1</option>
+                <option value="Opcion1">Opcion2</option>
+                <option value="Opcion1">Opcion3</option>
+                <option value="Opcion1">Opcion4</option>
+                <option value="Opcion1">Opcion5</option>
+                <option value="Opcion1">Opcion6</option>
+            </datalist>
+        </fieldset><br><br>
+    <!--Creamos una funcion para mostrar suma en un output-->
+        <fieldset>
+            <legend>Resultado de output</legend>
+            <label for="input-a">Ingrese un numero</label>
+            <input type="number" id="input-a" name="a" oninput="calculate()">
+
+            <label for="input-b">Ingreser un numero:</label>
+            <input type="number" id="input-b" name="b" oninput="calculate()">
+
+            <output id="result" for="input-a input-b"></output>
+            <script>
+                function calculate(){
+                    var a = document.getElementById("input-a").value;
+                    var b = document.getElementById("input-b").value;
+                    var result = document.getElementById("result");
+                    result.innerHTML = a * b;
+                }
+            </script>
+        </fieldset>
+        <fieldset>
+            <legend>input disabled</legend>
+            <input type="text" disabled>
+        </fieldset>
+       
+        <fieldset>
+            <legend>Autocomplete campos</legend>
+            <br><label for="nombre" id="nombre">Ingrese su nombre:*</label>
+            <input pattern="[a,z]{1,15}" type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" autocomplete="name" required><br><br>
+            
+            <label for="apellido" id="apellido">Ingrese su apellido:*</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" autocomplete="family-name" required><br><br>
+            
+            <label for="email" id="email">Ingrese el correo:*</label>
+            <input type="text" id="email" name="email" placeholder="Ingrese el correo" autocomplete="email" required pattern="email">
+        </fieldset>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

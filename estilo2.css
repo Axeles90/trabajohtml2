@@ -1,0 +1,9 @@
+#mark{
+    color: black;
+}
+input:invalid{
+    border-color: rgb(143, 57, 57);
+}
+input ,input:valid{
+    border-color: grey;
+}
